@@ -13,8 +13,32 @@
 
 <body>
     <!-- 头部的logo区域 -->
-    <div class="layui-main">
+    <div class="layui-main  header">
         <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div class="login-box">
+        <div class="login-title"></div>
+        <div class="login">
+            <form class="layui-form" action="">
+                <!-- 用户名 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input ">
+                </div>
+                <!-- 密码 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="title" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 登录 -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit lay-filter="formDemo">登录</button>
+                </div>
+                <form/>
+                <div class="layui-form-item">
+                    <a href="javascript:;" class="reg">去注册账号</a>
+                </div>
+        </div>
     </div>
 </body>
 
