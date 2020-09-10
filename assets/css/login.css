@@ -27,7 +27,8 @@ body {
     background: url(/assets/images/login_title.png)no-repeat center;
 }
 
-.layui-form {
+.login,
+.reg-box {
     margin: 0 30px;
 }
 
@@ -50,7 +51,12 @@ body {
     padding-left: 35px;
 }
 
-.reg {
-    position: absolute;
-    right: 0;
+.reg,
+.tologin {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reg-box {
+    display: none;
 }
