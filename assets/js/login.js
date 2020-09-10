@@ -7,4 +7,9 @@ $(function() {
         $('.login').show()
         $('.reg-box').hide()
     })
+
+
+
+
+
 })
