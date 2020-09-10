@@ -15,12 +15,13 @@
       <img src="/assets/images/logo.png" alt="" />
     </div>
     <!-- 登陆注册div -->
-    <div class="login-box">
-      <div class="login-title"></div>
-      <!-- 登录 div-->
-      <div class="login">
-        <form class="layui-form" id="form_login">
-          <!-- 用户名 -->
+    <div class="login">
+      <!-- 后台管理系统 -->
+      <div class="titlebox"></div>
+      <div class="login-box">
+        <!-- 登录表单 -->
+        <!-- 用户名 -->
+        <form class="layui-form" id="form_login" action="">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
             <input
@@ -40,34 +41,32 @@
               type="password"
               name="password"
               required
-              lay-verify="required|pass"
-              placeholder="请输入密码 "
+              lay-verify="required|pwd"
+              placeholder="请输入密码"
               autocomplete="off"
               class="layui-input"
             />
           </div>
-
-          <!-- 登录按钮 -->
+          <!-- 登录 -->
+          <!-- 注意：表单提交按钮和普通按钮的区别就是lay-submit这个属性 -->
           <div class="layui-form-item">
-            <!-- 注意 表单提交按钮和普通按钮的区别就是lay-submit属性 -->
             <button
-              class="layui-btn layui-btn-normal layui-btn-fluid"
+              class="layui-btn layui-btn-fluid layui-btn-normal"
               lay-submit
             >
               登录
             </button>
           </div>
         </form>
-        <!-- 注册点击 -->
-        <div class="layui-form-item reg">
-          <a href="javascript:;">去注册账号</a>
+        <!-- 跳转链接 -->
+        <div class="layui-form-item">
+          <a href="javascript:;" class="reg">去注册账号</a>
         </div>
       </div>
-      <!-- 注册的div  -->
+      <!-- 注册表单 -->
       <div class="reg-box">
-        <!-- 注册的表单 -->
-        <form class="layui-form" id="form_reg">
-          <!-- 用户名 -->
+        <!-- 用户名 -->
+        <form class="layui-form" id="register" action="">
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-username"></i>
             <input
@@ -87,21 +86,21 @@
               type="password"
               name="password"
               required
-              lay-verify="required|pass"
-              placeholder="请输入密码 "
+              lay-verify="required|pwd"
+              placeholder="请输入密码"
               autocomplete="off"
               class="layui-input"
             />
           </div>
-          <!-- 密码确认框 -->
+          <!-- 再次确认密码 -->
           <div class="layui-form-item">
             <i class="layui-icon layui-icon-password"></i>
             <input
               type="password"
               name="repassword"
               required
-              lay-verify="required|pass|repwd"
-              placeholder="请输入密码"
+              lay-verify="required|pwd|repwd"
+              placeholder="再次输入密码"
               autocomplete="off"
               class="layui-input"
             />
@@ -109,16 +108,16 @@
           <!-- 登录 -->
           <div class="layui-form-item">
             <button
-              class="layui-btn layui-btn-normal layui-btn-fluid"
+              class="layui-btn layui-btn-fluid layui-btn-normal"
               lay-submit
-              lay-filter="formDemo"
             >
               注册
             </button>
           </div>
         </form>
-        <div id="link_login" class="layui-form-item tologin">
-          <a href="javascript:;">去登录</a>
+        <!-- 跳转链接 -->
+        <div class="layui-form-item">
+          <a href="javascript:;" class="gologin">去登录</a>
         </div>
       </div>
     </div>
@@ -128,7 +127,6 @@
   <script src="/assets/js/jquery.js"></script>
   <!--导入 layui的js文件 -->
   <script src="/assets/lib/layui/layui.all.js"></script>
-  <!-- <script src="/assets/lib/layui/"></script> -->
   <!-- 导入自己的javascript文件 -->
   <script src="/assets/js/login.js"></script>
 </html>

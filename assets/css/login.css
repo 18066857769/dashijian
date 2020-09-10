@@ -48,7 +48,7 @@ body {
 }
 
 .layui-input {
-    padding-left: 35px;
+    padding-left: 32px;
 }
 
 .reg,
@@ -59,4 +59,9 @@ body {
 
 .reg-box {
     display: none;
+}
+
+.reg,
+.tologin a {
+    font-size: 12px;
 }
