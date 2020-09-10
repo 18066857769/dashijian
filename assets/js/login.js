@@ -36,9 +36,7 @@ $(function () {
       password: $("#form_reg [ name=password] ").val(),
     };
     //发起ajax的post请求
-    $.post("http://ajax.frontend.itheima.net/api/reguser", data, function (
-      res
-    ) {
+    $.post("/api/reguser", data, function (res) {
       if (res.status !== 0) {
         return layer.msg(res.message);
       }
@@ -51,16 +49,21 @@ $(function () {
     //1.阻止默认的提交行为
     e.preventDefault();
     var data = {
-      username: $("#form_reg [ name=username] ").val(),
-      password: $("#form_reg [ name=password] ").val(),
+      username: $("#form_login [name=username]").val(),
+      password: $("#form_login [name=password]").val(),
     };
+    // console.log(data);
     //发起ajax的post请求
-    $.post("http://ajax.frontend.itheima.net/api/login", data, function (res) {
+    $.post("/api/login", data, function (res) {
       if (res.status !== 0) {
         return layer.msg(res.message);
       }
+
+      layer.msg("登录成功！");
+      //将登陆成功得到的token字符串，保存到localstorage中
+      localStorage.setItem("token", res.token);
+      //跳转到后台主页
+      location.href = "/index.html";
     });
-    layer.msg("登录成功！");
-    location.href = "index.html";
   });
 });
