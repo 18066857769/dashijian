@@ -1,0 +1,46 @@
+能造成浏览器发起请求的方式
+	自己在地址栏敲入地址
+	link href
+	script src
+	img src
+	a href 点击
+	form submit 点击
+	ajax
+ajax的概念和场景
+	在不刷新当前页面的情况下, 使用js代码发起对另外一个地址的请求,
+	在得到数据之后, 做当前界面的局部刷新
+jQuery中使用ajax的方式
+	$.get(url, {}, function(res){})
+	$.post(url, {}, function(res){})
+	$.ajax({
+		type: 'get/post',
+		url: '',
+		data: {},
+		dataType: 'jsonp',
+		success:function(res){}
+	})
+axios中使用ajax的方式
+	axios.get(url, {params: {id: 2}}).then(function(res){ res.data })
+	axios.post(url, {bookname: ''}).then(function(res){ res.data })
+	axios({
+		method: 'get/post',
+		url: '',
+		params: {},
+		data: {}
+	}).then(function(res){ res.data })
+接口,接口文档的意义
+
+根据数据渲染模板的方式
+	for 自己生成html字符串 (模板字符串)
+	模板引擎的方式
+		定义模板
+		var htmlStr = template(id, data)		 
+		{{each}}  {{if}}  {{ | }}	
+同源策略,跨域
+	什么和什么的同源
+	cors 
+	jsonp 原理
+序列化和反序列化
+	字符串--->js对象   JSON.parse(字符串)	
+	js对象--->字符串   JSON.stringify(js对象)
+防抖和节流的控制
