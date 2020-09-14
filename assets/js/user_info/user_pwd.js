@@ -10,13 +10,15 @@ $(function () {
       }
     },
     rePwd: function (value) {
-      if (value !== $("[name=newpassword]").val()) {
+      if (value !== $("[name=newpa,ssword]").val()) {
         return "两次密码不一致！";
       }
     },
   });
 
   $("#respassword").on("submit", function (e) {
+    var data = $(this).serialize();
+    console.log(data);
     e.preventDefault();
     $.ajax({
       type: "POST",
@@ -27,9 +29,9 @@ $(function () {
           return layui.layer.msg("更新密码失败！");
         }
         console.log(res);
-        // layui.layer.msg("更新密码成功！");
-        // // 重置表单
-        // $(".layui-form")[0].reset();
+        layui.layer.msg("更新密码成功！");
+        // 重置表单
+        $(".layui-form")[0].reset();
       },
     });
   });
