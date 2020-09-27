@@ -144,5 +144,8 @@ $(function () {
             layer.close(index);
         });
     })
+    $('body').on('click', '#btn-edit', function () {
+        location.href = '/article/1.html'
+    })
 
 })
